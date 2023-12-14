@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Way Q&A</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <meta name="author" content="Mounseflit">
+    <link rel="shortcut icon" type="x-icon" href="assets/img/logo.png">
+
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        display: flex;
+    }
+
+
+    .sidebar {
+        position: sticky;
+        top: 0;
+        left: 0px;
+        bottom: 0;
+        width: 110px;
+        height: 100vh;
+        padding: 0 1.7rem;
+        color: #fff;
+        overflow: hidden;
+        transform: all 0.5s linear;
+        background: #512da8;
+    }
+
+    .sidebar:hover {
+        width: 240px;
+        transform: 0.5s;
+    }
+
+    .logo {
+        height: 80px;
+        padding: 16px;
+    }
+
+    .menu {
+        height: 88%;
+        position: relative;
+        list-style: none;
+        padding: 0;
+    }
+
+    .menu li {
+        padding: 1rem;
+        margin: 8px 0;
+        border-radius: 8px;
+        transition: all 0.5s;
+    }
+
+    .menu li:hover,
+    .active {
+        font-weight: bolder;
+    }
+
+    .menu a {
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .menu a span {
+        overflow: hidden;
+    }
+
+    .menu a i {
+        font-size: 1.2rem;
+    }
+
+    .logout {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Main body section */
+    .main--content {
+
+        position: relative;
+        background: #ebe9e9;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .header--wrapper img {
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        border-radius: 40%;
+    }
+
+    .header--wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px 2rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .header--title {
+        color: #512da8;
+    }
+
+    .user--info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .searh--box {
+        background-color: rgb(237, 237, 237);
+        border-radius: 15px;
+        color: #512da8;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 12px;
+    }
+
+    .searh--box input {
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    .searh--box i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+    }
+
+    .searh--box i:hover {
+        transform: scale(1.2);
+    }
+
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
+
+    .highlight {
+        background-color: yellow;
+        font-weight: bold;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+<body>
+    <div class="sidebar" id="searchableContent">
+        <br>
+        <ul class="menu">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="mailto: myway.core.team@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <span>Mails</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="secteur.html">
+                    <i class="fas fa-suitcase"></i>
+                    <span>Jobs</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="filier.html">
+                    <i class="fas fa-database"></i>
+                    <span>Majors</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="ecole.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Schools</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="profil.html" class="active">
+                    <i class="fas fa-question"></i>
+                    <span>Q&A</span>
+                </a>
+            </li>
+
+            
+            <li class="logout">
+                <a href="login.html">
+                    <i class="fas fa-sign-out"></i>
+                    <span>log out </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span></span>
+                <h2>Q&A - Dashboard</h2>
+            </div>
+            <div class="user--info">
+               
+                <img src="assets/logo.png" />
+            </div>
+
+        </div>
+        <div class="card--container">
+            <h3 class="main--title"></h3>
+            <div class="card--wrapper">
+                <div class="payment--card">
+                    <div class="card--header">
+                        <div class="amount">
+
+
+
+
+
+                            <style>
+                                .amount {
+                                    font-family: 'Arial', sans-serif;
+                                    background-color: #f5f5f5;
+                                    margin: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100vh;
+                                }
+
+                                .contact-form {
+                                    max-width: 400px;
+                                    width: 100%;
+                                    background-color: #fff;
+                                    padding: 30px;
+                                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                                    border-radius: 8px;
+
+                                }
+
+                                h2 {
+                                    color: #673ab7;
+                                    text-align: center;
+                                }
+
+                                form {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+
+                                label {
+                                    margin-top: 15px;
+                                    color: #555;
+                                }
+
+                                input,
+                                textarea {
+                                    padding: 12px;
+                                    margin-top: 5px;
+                                    margin-bottom: 15px;
+                                    border: 1px solid #ccc;
+                                    border-radius: 4px;
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                }
+
+                                button {
+                                    background-color: #673ab7;
+                                    color: #fff;
+                                    padding: 12px;
+                                    border: none;
+                                    border-radius: 4px;
+                                    cursor: pointer;
+                                    font-size: 1em;
+                                    width: 100%;
+                                }
+
+                                button:hover {
+                                    background-color: #512da8;
+                                }
+                            </style>
+
+                            <div class="contact-form">
+                                <h2>Q&A</h2>
+                                <form>
+                                    <label for="name">Your Name:</label>
+                                    <input type="text" id="name" name="name" required>
+
+                                    <label for="email">Your Email:</label>
+                                    <input type="email" id="email" name="email" required>
+
+                                    <label for="message">Your Questions Or FeedBack:</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                                    <button  id="btnsub">Submit</button>
+                                </form>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+<script>
+
+    var btnsend = document.getElementById('btnsub')
+    btnsend.addEventListener('click', function (e) {
+        e.preventDefault()
+        var name = document.getElementById('name').value;
+        var mail = document.getElementById('email').value;
+        var sub = 'my Way Q&A : ' + document.getElementById('name').value;
+        var msg = document.getElementById('message').value;
+        var body = '<br/> >> E-mail : ' + mail + '<br/> >> Name : ' + name + '<br/><br/>------------------------------------------------------------------------------------<br/> subject : ' + sub + '<br/>------------------------------------------------------------------------------------<br/><br/>' + msg + '<br/> <br/> <br/> <br/> <br/> ';
+
+        if (msg != "" && mail != "") {
+            if (mail.includes('@') && mail.includes('.')) {
+                Email.send({
+                    SecureToken: "68faeb6a-6490-4eb1-bad6-54ea5c883181",
+                    To: 'litnitimounsef@gmail.com',
+                    From: "litnitimounsef@gmail.com",
+                    Subject: sub,
+                    Body: body
+                }).then(
+                    message => {
+                        if (message == 'OK') {
+                            alert('Your Mail sent successfully, Thank you <3');
+                            document.getElementById('name').value = "";
+                            document.getElementById('email').value = "";
+                            document.getElementById('message').value = "";
+                        } else {
+                            console.error(message);
+                            alert('Error in sending Mail !!!');
+                        }
+                    }
+                );
+            } else {
+                alert('E-mail need an "@" and "." !!');
+            }
+        } else {
+            if (msg == "") {
+                alert('Message cant be empty !!');
+            } else {
+                alert('E-mail cant be empty !!');
+            }
+        }
+
+    })
+
+</script>
+
+</body>
+
+</html>
